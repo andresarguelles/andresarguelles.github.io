@@ -1,155 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio Arguelles</title>
-    <!--Agregamos descripcion, porque es de hecho lo que puede aparecer en el motor de busqueda-->
-    <meta name="description" content="Portfolio de Andrés Arguelles, estudiante de ingeniería en computación">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--open graph nos ayudará a mostrar una tarjeta descriptiva atractiva para la hora de compartir nuestras redes-->
-    <meta property = "og:title" content="Portfolio de un estudiante de ingenieria en computacion">
-    <meta property = "og:image" content="public/images/profile_picture.jpg">
+        <title>Portfolio Arguelles</title>
+        <!--Agregamos descripcion, porque es de hecho lo que puede aparecer en el motor de busqueda-->
+        <meta name="description" content="Portfolio de Andrés Arguelles, estudiante de ingeniería en computación">
 
-    <meta name ="robots" content="index, follow">
-    <meta name = "theme-color" content = "#09fa">
-    <!--Ingresamos icono de nuestra pagina-->
-    <link rel="icon" type = "image/jpg" href="public/images/profile_picture.jpg">
-</head>
+        <!--open graph nos ayudará a mostrar una tarjeta descriptiva atractiva para la hora de compartir nuestras redes-->
+        <meta property = "og:title" content="Portfolio de un estudiante de ingenieria en computacion">
+        <meta property = "og:image" content="public/images/profile_picture.jpg">
 
-<header>
-    <a download href="public/images/profile_picture.jpg">
-        <!--style="width: 100%; aspect-ratio: 16/9;"-->
-        <img
-            id = "foto-perfil-andres"
-            width="200"
-            height="200"
-            title = "Fotografia de Andres" 
-            alt= "Una fotografia de Andres Arguelles soplando a su pastel de cumpleaños" 
-            src="public/images/profile_picture.jpg"
-        >
-    </a>
+        <meta name ="robots" content="index, follow">
+        <meta name = "theme-color" content = "#09fa">
+        <!--Ingresamos icono de nuestra pagina-->
+        <link rel="icon" type = "image/jpg" href="public/images/profile_picture.jpg">
 
-    <h1>Portfolio de Andrés Arguelles</h1>
-    <nav>
-        <a href="#cursos-y-experiencias">Cursos y Experiencias</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
-        <a href="#contacto">Contacto</a>
-        <a 
-            href="https://linkedin.com/in/andresarguellesg"
-            target= "_blank"
-            rel = "noreferer">
-            LinkedIn
+        <style>
+            /*
+                Indicamos class con .
+                Indicamos id con #
+                Indicamos etiqueta, simplemente con el nombre
+            */
+            h1{
+                /*declaracion*/
+                color: rgb(35 39 42/ 50%);
+            }
+
+            body{
+                background-color: #35da8855;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            
+            .link{
+                color: darkcyan;
+                text-decoration: none;
+                padding: 5px;
+            }
+
+            /*Cuando paso el mouse por encima con la pseudoclase hover*/
+            .link:hover{
+                color: white;
+                /*diferencia abismal entre la propiedad border y outline. Border es por dentro, outline es por fuera*/
+                outline: 1px solid none;
+                border-radius: 5px;
+                background-color: red;
+            }
+            /*Cuando doy click exactamente con la pseudo clase active*/
+            .link:active{
+                background-color: darkblue;
+            }
+        </style>
+    </head>
+
+    <header>
+        <a download href="public/images/profile_picture.jpg">
+            <!--style="width: 100%; aspect-ratio: 16/9;"-->
+            <img
+                style="aspect-ratio: 1/1;"
+                height="50%"
+                width="50%"
+                id = "foto-perfil-andres"
+                width="200"
+                height="200"
+                title = "Fotografia de Andres" 
+                alt= "Una fotografia de Andres Arguelles soplando a su pastel de cumpleaños" 
+                src="public/images/profile_picture.jpg"
+            >
         </a>
-        <a 
-            href="https://github.com/andresarguelles"
-            target= "_blank"
-            rel = "noreferer">
-            GitHub
-        </a>
-    </nav>
-</header>
-<body>
-    <main>
-        <p>Estudiante de <strong>ingenieria en computación</strong> en el <strong>Instituto Poliécnico Nacional</strong>, interesado en el desarrollo web backend</p>
-        <section id="cursos-y-experiencias">
-            <h2>Cursos y experiencias</h2>
-            <ul>
-                <li class = "list-item">Freeelance - 2024</li>
-                <li class = "list-item">Oracle Next Education - 2023</li>
-                <li class = "list-item">ASEC - 2022</li>
-            </ul>
-        </section>
-        <section id= "proyectos">
-            <h2>Proyectos</h2>
-            <article>
-                <header>
-                    <h3>Sitio web: Poliprofes</h3>
-                </header>
-                <p>Participé en la construccion de la base de datos, asi como el montaje de un servidor web y algunos de los endpoints para el api principal</p>
-                <footer>
-                    <small>Tecnologias utilizadas: JavaScript, Nodejs, Express, MySQL/Workbench</small>
-                </footer>
-            </article>
-            <article>
-                <header>
-                    <h3>Aplicacion de escritorio: SCIE</h3>
-                </header>
-                <p>Me encargué de desarrollar la aplicación en su totalidad, desde la logica de calculos y recepción de datos, hasta el diseño de la interfaz grafica</p>
-                <footer>
-                    <small>Tecnologias utilizadas: Java, JavaFX, FXML, Scene Builder, Maven</small>
-                </footer>
-            </article>
-        </section>
-        <section id="preguntas-frecuentes">
-            <h2>Preguntas frecuentes</h2>
-            <details open>
-                <summary>¿Qué estudios tienes?</summary>
-                <p>Actualmente me encuentro terminando la carrera de ingenieria en computacion en el Instituto Politécnico Nacional, sin embargo, tambien tuve algunas experiencias en otras escuelas/carreras que me han aportado a mejorar mis conocimientos de logica computacional, como cinco semestres en la facultad de matematicas de la Universidad Veracruzana (UV) o bien 3 trimestres en Ingenieria Fisica de la Universidad Autonoma de Mexico (UAM).</p>
-            </details>
-            <details>
-                <summary>¿Cual es tu lenguaje favorito?</summary>
-                <p>Java; a ver, me gusta c++ porque de hecho ese fue el primero que aprendí, pero cuando conocí java, sobre todo por el manejo de multiherencia, pues se me hizo muchisimo mas facil de comprender, ademas de que siento que facilita la creacion de las aplicaciones orientadas a objetos.</p>
-            </details>
-            <details>
-                <summary>¿Cuales son tus hobbies?</summary>
-                <p>Me gusta mucho ver peliculas sobre todo en el cine o también, disfruto mucho de escuchar musica house; future house, bass house, tropical, vaya de todo house, creo que el que no me gusta es el g-house, pero hasta eso, pues no lo odio. De estas dos principales actividades creo que es super genial salir y tener esa convivencia con la gente, disfrutando lo que te gusta juntos, en el primer caso, asistiendo al cine, y pues en el segundo caso en festivales de musica electrónica.</p>
-            </details>
-        </section>
-        <section id="contacto">
-            <h2>Formulario de contacto</h2>
-            <form method="POST" action= "/">
-                <fieldset>
-                    <legend>Informacion personal</legend>
-                    <div>
-                        <label>Nombre: 
-                            <input type="text" id= "name" name= "name" 
-                            placeholder = "Andrés Argüelles" required>
-                        </label>
-                    </div>
-                    <div>
-                        <label>Email: 
-                            <input type="email" id= "email" name= "email" 
-                            placeholder = "aarguellesgonzalez@gmail.com" required>
-                        </label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Informacion adicional</legend>
-                    <div>
-                        <label>Telefono: 
-                            <input type="tel" id= "telefono" name= "telefono" 
-                            placeholder = "5526879283" pattern="[0-9]{10}">
-                        </label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Otros</legend>
-                    <div>
-                        <datalist id="languages">
-                            <option value="Java"></option>
-                            <option value="JavaScript"></option>
-                            <option value="MatLab"></option>
-                            <option value="C/C++"></option>
-                        </datalist>
-                        <label>¿Con qué lenguaje quieres que te ayude?: 
-                            <input list="languages" name="languages">
-                        </label>
-                    </div>
-                </fieldset>
-                <input type="submit" value="Enviar contacto">
-            </form>
 
-        </section>
-    </main>
-</body>
-<footer>
-        <!--Aqui podemos incluir un mensaje de whatsapp, pero el mensaje tiene que estar codificado para el url, habra que ver una forma de insertar un urlencodedtext-->
-        <a href="https://wa.me/2281970110?text=Hola%20Andres%20">Whatsapp</a>
-        <a href="mailto:aarguellesgonzalez@gmail.com">Enviame un correo</a>
-        <a href="tel: +522281970110">Llama por telefono</a>
-    <p>Copyright © 2024 - Andrés Argüelles</p>
-</footer>
+        <h1>Portfolio de Andrés Arguelles</h1>
+        <nav>
+            <a class="link" href="#cursos-y-experiencias">Cursos y Experiencias</a>
+            <a class="link" href="#proyectos">Proyectos</a>
+            <a class="link" href="#preguntas-frecuentes">Preguntas frecuentes</a>
+            <a class="link" href="#contacto">Contacto</a>
+            <a  class="link"
+                href="https://linkedin.com/in/andresarguellesg"
+                target= "_blank"
+                rel = "noreferer">
+                LinkedIn
+            </a>
+            <a class="link"
+                href="https://github.com/andresarguelles"
+                target= "_blank"
+                rel = "noreferer">
+                GitHub
+            </a>
+        </nav>
+    </header>
+
+    <body>
+        <main>
+            <p>Estudiante de <strong>ingenieria en computación</strong> en el <strong>Instituto Poliécnico Nacional</strong>, interesado en el desarrollo web backend</p>
+            <section id="cursos-y-experiencias">
+                <h2>Cursos y experiencias</h2>
+                <ul>
+                    <li class = "list-item">Freeelance - 2024</li>
+                    <li class = "list-item">Oracle Next Education - 2023</li>
+                    <li class = "list-item">ASEC - 2022</li>
+                </ul>
+            </section>
+            <section id= "proyectos">
+                <h2>Proyectos</h2>
+                <article>
+                    <header>
+                        <h3>Sitio web: Poliprofes</h3>
+                    </header>
+                    <p>Participé en la construccion de la base de datos, asi como el montaje de un servidor web y algunos de los endpoints para el api principal</p>
+                    <footer>
+                        <small>Tecnologias utilizadas: JavaScript, Nodejs, Express, MySQL/Workbench</small>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h3>Aplicacion de escritorio: SCIE</h3>
+                    </header>
+                    <p>Me encargué de desarrollar la aplicación en su totalidad, desde la logica de calculos y recepción de datos, hasta el diseño de la interfaz grafica</p>
+                    <footer>
+                        <small>Tecnologias utilizadas: Java, JavaFX, FXML, Scene Builder, Maven</small>
+                    </footer>
+                </article>
+            </section>
+            <section id="preguntas-frecuentes">
+                <h2>Preguntas frecuentes</h2>
+                <details>
+                    <summary>¿Qué estudios tienes?</summary>
+                    <p>Actualmente me encuentro terminando la carrera de ingenieria en computacion en el Instituto Politécnico Nacional, sin embargo, tambien tuve algunas experiencias en otras escuelas/carreras que me han aportado a mejorar mis conocimientos de logica computacional, como cinco semestres en la facultad de matematicas de la Universidad Veracruzana (UV) o bien 3 trimestres en Ingenieria Fisica de la Universidad Autonoma de Mexico (UAM).</p>
+                </details>
+                <details>
+                    <summary>¿Cual es tu lenguaje favorito?</summary>
+                    <p>Java; a ver, me gusta c++ porque de hecho ese fue el primero que aprendí, pero cuando conocí java, sobre todo por el manejo de multiherencia, pues se me hizo muchisimo mas facil de comprender, ademas de que siento que facilita la creacion de las aplicaciones orientadas a objetos.</p>
+                </details>
+                <details>
+                    <summary>¿Cuales son tus hobbies?</summary>
+                    <p>Me gusta mucho ver peliculas sobre todo en el cine o también, disfruto mucho de escuchar musica house; future house, bass house, tropical, vaya de todo house, creo que el que no me gusta es el g-house, pero hasta eso, pues no lo odio. De estas dos principales actividades creo que es super genial salir y tener esa convivencia con la gente, disfrutando lo que te gusta juntos, en el primer caso, asistiendo al cine, y pues en el segundo caso en festivales de musica electrónica.</p>
+                </details>
+            </section>
+            <section id="contacto">
+                <h2>Formulario de contacto</h2>
+                <form method="POST" action= "/">
+                    <fieldset>
+                        <legend>Informacion personal</legend>
+                        <div>
+                            <label>Nombre: 
+                                <input type="text" id= "name" name= "name" 
+                                placeholder = "Roberto Martinez" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label>Email: 
+                                <input type="email" id= "email" name= "email" 
+                                placeholder = "correo@email.com" required>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Informacion adicional</legend>
+                        <div>
+                            <label>Telefono: 
+                                <input type="tel" id= "telefono" name= "telefono" 
+                                placeholder = "5526879283" pattern="[0-9]{10}">
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Otros</legend>
+                        <div>
+                            <datalist id="languages">
+                                <option value="Java"></option>
+                                <option value="JavaScript"></option>
+                                <option value="MatLab"></option>
+                                <option value="C/C++"></option>
+                            </datalist>
+                            <label>¿Con qué lenguaje quieres que te ayude?: 
+                                <input list="languages" name="languages">
+                            </label>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Enviar contacto">
+                </form>
+
+            </section>
+        </main>
+    </body>
+
+    <footer>
+            <!--Aqui podemos incluir un mensaje de whatsapp, pero el mensaje tiene que estar codificado para el url, habra que ver una forma de insertar un urlencodedtext-->
+            <a href="https://wa.me/2281970110?text=Hola%20Andres%20">Whatsapp</a>
+            <a href="mailto:aarguellesgonzalez@gmail.com">Enviame un correo</a>
+            <a href="tel: +522281970110">Llama por telefono</a>
+        <p>Copyright © 2024 - Andrés Argüelles</p>
+    </footer>
+
 </html>
