@@ -18,70 +18,42 @@
         <!--Ingresamos icono de nuestra pagina-->
         <link rel="icon" type = "image/jpg" href="public/images/profile_picture.jpg">
 
-        <style>
-            /*
-                Indicamos class con .
-                Indicamos id con #
-                Indicamos etiqueta, simplemente con el nombre
-            */
-            h1{
-                /*declaracion*/
-                color: rgb(35 39 42/ 50%);
-            }
-
-            body{
-                background-color: #35da8855;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            
-            .link{
-                color: darkcyan;
-                text-decoration: none;
-                padding: 5px;
-            }
-
-            /*Cuando paso el mouse por encima con la pseudoclase hover*/
-            .link:hover{
-                color: white;
-                /*diferencia abismal entre la propiedad border y outline. Border es por dentro, outline es por fuera*/
-                outline: 1px solid none;
-                border-radius: 5px;
-                background-color: red;
-            }
-            /*Cuando doy click exactamente con la pseudo clase active*/
-            .link:active{
-                background-color: darkblue;
-            }
-        </style>
+        <link rel="stylesheet" href="public/styles/style.css">
     </head>
 
-    <header>
-        <a download href="public/images/profile_picture.jpg">
-            <!--style="width: 100%; aspect-ratio: 16/9;"-->
-            <img
-                style="aspect-ratio: 1/1;"
-                height="50%"
-                width="50%"
-                id = "foto-perfil-andres"
-                width="200"
-                height="200"
-                title = "Fotografia de Andres" 
-                alt= "Una fotografia de Andres Arguelles soplando a su pastel de cumpleaños" 
-                src="public/images/profile_picture.jpg"
-            >
-        </a>
+    <body>
 
-        <h1>Portfolio de Andrés Arguelles</h1>
-        <nav>
-            <a class="link" href="#cursos-y-experiencias">Cursos y Experiencias</a>
-            <a class="link" href="#proyectos">Proyectos</a>
-            <a class="link" href="#preguntas-frecuentes">Preguntas frecuentes</a>
-            <a class="link" href="#contacto">Contacto</a>
+        <header class = "header">
+            <nav class="navmenu">
+                <a class= "link" href="#acerca-de-mi">Acerca de mi</a>
+                <a class= "link" href="#proyectos">Proyectos</a>
+                <a class= "link" href="#cursos-y-experiencias">Cursos y Experiencias</a>
+                <a class= "link" href="#preguntas-frecuentes">Preguntas frecuentes</a>
+                <a class= "link" href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- <a download href="public/images/profile_picture.jpg">
+                <img
+                    style="aspect-ratio: 1/1;"
+                    height="25%"
+                    width="25%"
+                    id = "foto-perfil-andres"
+                    width="200"
+                    height="200"
+                    title = "Fotografia de Andres" 
+                    alt= "Una fotografia de Andres Arguelles soplando a su pastel de cumpleaños" 
+                    src="public/images/profile_picture.jpg"
+                >
+            </a> -->
+            <h1>Andrés Argüelles</h1>
+            <p>Estudiante de <strong>ingeniería en computación</strong> en el <strong>Instituto Politécnico Nacional</strong>, enfocado en el desarrollo web backend.</p>
             <a  class="link"
-                href="https://linkedin.com/in/andresarguellesg"
-                target= "_blank"
-                rel = "noreferer">
-                LinkedIn
+            href="https://linkedin.com/in/andresarguellesg"
+            target= "_blank"
+            rel = "noreferer">
+            LinkedIn
             </a>
             <a class="link"
                 href="https://github.com/andresarguelles"
@@ -89,19 +61,11 @@
                 rel = "noreferer">
                 GitHub
             </a>
-        </nav>
-    </header>
-
-    <body>
-        <main>
-            <p>Estudiante de <strong>ingenieria en computación</strong> en el <strong>Instituto Poliécnico Nacional</strong>, interesado en el desarrollo web backend</p>
-            <section id="cursos-y-experiencias">
-                <h2>Cursos y experiencias</h2>
-                <ul>
-                    <li class = "list-item">Freeelance - 2024</li>
-                    <li class = "list-item">Oracle Next Education - 2023</li>
-                    <li class = "list-item">ASEC - 2022</li>
-                </ul>
+            <section id="acerca-de-mi">
+                <h2>Acerca de mi</h2>
+                <p>¡Hola! me presento, soy Andrés, aunque me gusta más que me llamen por mi apellido; Argüelles. </p>
+                <p>A lo largo de mis tres años de carrera, he tenido la oportunidad de trabajar en pequeños y medianos proyectos que me han hecho aprender de multiples estrategias y herrramientas de desarrollo; web, desktop y mobile. En cierto aspecto, la carrera me ha hecho tener que aprender de todo un poco.</p>
+                Actualmente estoy mejorando mis habilidades con algunas tecnologias front, sin embargo, me gustaría especializarme 100% en el back.</p>
             </section>
             <section id= "proyectos">
                 <h2>Proyectos</h2>
@@ -124,6 +88,14 @@
                     </footer>
                 </article>
             </section>
+            <section id="cursos-y-experiencias">
+                <h2>Cursos y experiencias</h2>
+                <ul>
+                    <li class = "list-item">Freeelance - 2024</li>
+                    <li class = "list-item">Oracle Next Education - 2023</li>
+                    <li class = "list-item">ASEC - 2022</li>
+                </ul>
+            </section>
             <section id="preguntas-frecuentes">
                 <h2>Preguntas frecuentes</h2>
                 <details>
@@ -140,7 +112,8 @@
                 </details>
             </section>
             <section id="contacto">
-                <h2>Formulario de contacto</h2>
+                <h2>Contáctame</h2>
+                <p>Si tienes alguna pregunta o quieres discutir un proyecto, no dudes en ponerte en contacto conmigo.</p>
                 <form method="POST" action= "/">
                     <fieldset>
                         <legend>Informacion personal</legend>
@@ -153,7 +126,7 @@
                         <div>
                             <label>Email: 
                                 <input type="email" id= "email" name= "email" 
-                                placeholder = "correo@email.com" required>
+                                placeholder = "correo@ejemplo.com" required>
                             </label>
                         </div>
                     </fieldset>
@@ -185,14 +158,15 @@
 
             </section>
         </main>
-    </body>
 
-    <footer>
+        <footer>
             <!--Aqui podemos incluir un mensaje de whatsapp, pero el mensaje tiene que estar codificado para el url, habra que ver una forma de insertar un urlencodedtext-->
             <a href="https://wa.me/2281970110?text=Hola%20Andres%20">Whatsapp</a>
             <a href="mailto:aarguellesgonzalez@gmail.com">Enviame un correo</a>
             <a href="tel: +522281970110">Llama por telefono</a>
-        <p>Copyright © 2024 - Andrés Argüelles</p>
-    </footer>
+        <p>© 2024 Andrés Argüelles. Todos los derechos reservados</p>
+        </footer>
+
+    </body>
 
 </html>
